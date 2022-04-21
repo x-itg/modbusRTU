@@ -67,17 +67,16 @@ unsigned short CRC16x( unsigned char * pucFrame, unsigned short usLen )
 }
 ~~~
 # Modbus RTU协议
-//|                    | 地址1byte|功能码1byte|conut 1byte |寄存器地址/实际数据2bytes|寄存器个数/实际数据2bytes|校验2bytes|
-//|--------------------|----------|----------|------------|------------------------|-----------------------|---------|
-//|主机发读取保持型寄存器|0x01      |0x03      |   /        |reg_H   reg_L           |n_H     n_L            |CRCH  CRCL|
-//|从机应答 4字节为例    |0x01     |0x03      |  0x04       |d1_H    d1_L           |d2_H    d2_H           |CRCH  CRCL|
-//|主机发读取输入型寄存器|0x01      |0x04      |             |reg_H   reg_L          |n_H     n_L            |CRCH  CRCL|
-//|从机应答 4字节为例    |0x01     |0x04      |  0x04       |d1_H     d1_L          |d2_H    d2_L            |CRCH  CRCL|
-//|主机发写单保持型寄存器 |0x01    |0x06       |   /         |reg_H    reg_L         |d_H     d_L            |CRCH  CRCL|
-//|从机应答             |0x01     |0x06       |   /        |reg_H     reg_L         |d_H     d_L            |CRCH  CRCL|
+|                    | 地址1byte|功能码1byte|conut 1byte |寄存器地址/实际数据2bytes|寄存器个数/实际数据2bytes|校验2bytes|
+|--------------------|----------|----------|------------|------------------------|-----------------------|---------|
+|主机发读取保持型寄存器|0x01      |0x03      |   /        |reg_H   reg_L           |n_H     n_L            |CRCH  CRCL|
+|从机应答 4字节为例    |0x01     |0x03      |  0x04       |d1_H    d1_L           |d2_H    d2_H           |CRCH  CRCL|
+|主机发读取输入型寄存器|0x01      |0x04      |             |reg_H   reg_L          |n_H     n_L            |CRCH  CRCL|
+|从机应答 4字节为例    |0x01     |0x04      |  0x04       |d1_H     d1_L          |d2_H    d2_L            |CRCH  CRCL|
+|主机发写单保持型寄存器 |0x01    |0x06       |   /         |reg_H    reg_L         |d_H     d_L            |CRCH  CRCL|
+|从机应答             |0x01     |0x06       |   /        |reg_H     reg_L         |d_H     d_L            |CRCH  CRCL|
 
-//|                             |地址1byte|功能码1byte|寄存器地址2bytes|寄存器数2bytes|寄存器个数2bytes|conut字节数1byte| 数据1 2bytes|数据2 2bytes  |校验2bytes|
-//|-----------------------------|---------|-----------|---------------|-------------|---------------|----------------|-------------|-------------|----------|
-//|主机发写多保持型寄存器4字节为例 |0x01     |0x10       |reg_H reg_L   | reg_H reg_L   |n_H n _L      | 0x04           |d1_H d1_L    |d2_H d2_L   |CRCH  CRCL|
-//|从机应答                      |0x01     |0x10       |reg_H reg_L   | reg_H reg_L   |          /    |       /       |    /        |      /      |CRCH  CRCL|
-
+|                             |地址1byte|功能码1byte|寄存器地址2bytes|寄存器数2bytes|寄存器个数2bytes|conut字节数1byte| 数据1 2bytes|数据2 2bytes |校验2bytes|
+|-----------------------------|---------|-----------|---------------|-------------|---------------|----------------|-------------|-------------|----------|
+|主机发写多保持型寄存器4字节为例 |0x01     |0x10       |reg_H reg_L   | reg_H reg_L   |n_H n _L      | 0x04           |d1_H d1_L    |d2_H d2_L   |CRCH  CRCL|
+|从机应答                      |0x01     |0x10       |reg_H reg_L   | reg_H reg_L   |          /    |       /       |    /        |      /      |CRCH  CRCL|
