@@ -1,7 +1,8 @@
 # Modbus RTU协议
 
-|**写入**                        |地址1byte  |功能码1byte|寄存器地址2bytes|寄存器数2bytes|conut字节数1byte| 数据1 2bytes|数据2 2bytes |校验2bytes|
+|"/"表示不用|||||||||
 |:-------------------------------|:---------:|:---------:|:--------------:|:------------:|:--------------:|:-----------:|:-----------:|:--------:|
+|**写入**                        |地址1byte  |功能码1byte|寄存器地址2bytes|寄存器数2bytes|conut字节数1byte| 数据1 2bytes|数据2 2bytes |校验2bytes|
 |主机发写多保持型寄存器4字节为例 |0x01       |0x10       |reg_H reg_L     |reg_H reg_L   | 0x04           |d1_H d1_L    |d2_H d2_L    |CRCH  CRCL|
 |从机应答                        |0x01       |0x10       |reg_H reg_L     |reg_H reg_L   |       /        |    /        |      /      |CRCH  CRCL|
 |主机发写单保持型寄存器          |0x01       |0x06       |reg_H reg_L     |       /      |       /        |d_H     d_L  |      /      |CRCH  CRCL|
