@@ -82,8 +82,10 @@ unsigned short CRC16x( unsigned char * pucFrame, unsigned short usLen )
 |从机应答 4字节为例    |0x01      |0x04       |  0x04      |d1_H    d1_L             |d2_H    d2_L             |CRCH  CRCL|
 
 
-
 # stm32cubeide支持sprintf浮点数的打印
 - Project->Properties->C/C++ Build->Setting->Tool Setting->勾选 Use float with printf from newlib-nano(-u_printf_float)
-<img width="" height="90%" class="embed-show" src="http://iamrobot.top:7878/?explorer/share/file&hash=76f8aPVQKG8L8GHTzlcOrg1Fng9ZQR5o3U0Es4qMexyKFY0lMLJO-jOHkQve3vb91MA&name=/3.png" alt="3.png"/>
+<img width="" height="480" class="embed-show" src="http://iamrobot.top:7878/?explorer/share/file&hash=1c41C52ve1ZQbdibwikxXq6kEq9Yry-xGCGfjjthz-elPK8NWsINvoDn8BS4SOrkaxU&name=/3.png" alt="3.png"/>
+
+# 使用stm32生成iar和stm32cubeide工程
+<img width="" height="480" class="embed-show" src="http://iamrobot.top:7878/?explorer/share/file&hash=48d4XYjbheDuVVEz4Jll94t7GpHbpWsHO3Ttwv8ZzAXKcKI_nbXljiFe4QRQTYlfjBU&name=/iar%E5%92%8Cstm32cubeide.png" alt="iar和stm32cubeide.png"/>
 
