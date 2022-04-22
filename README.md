@@ -80,3 +80,9 @@ unsigned short CRC16x( unsigned char * pucFrame, unsigned short usLen )
 |从机应答 4字节为例    |0x01      |0x03       |  0x04      |d1_H    d1_L             |d2_H    d2_H             |CRCH  CRCL|
 |主机发读取输入型寄存器|0x01      |0x04       |            |reg_H   reg_L            |n_H     n_L              |CRCH  CRCL|
 |从机应答 4字节为例    |0x01      |0x04       |  0x04      |d1_H    d1_L             |d2_H    d2_L             |CRCH  CRCL|
+
+
+
+# stm32cubeide支持sprintf浮点数的打印
+- Project->Properties->C/C++ Build->Setting->Tool Setting->勾选 Use float with printf from newlib-nano(-u_printf_float)
+![设置](3.png)
