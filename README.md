@@ -85,4 +85,5 @@ unsigned short CRC16x( unsigned char * pucFrame, unsigned short usLen )
 
 # stm32cubeide支持sprintf浮点数的打印
 - Project->Properties->C/C++ Build->Setting->Tool Setting->勾选 Use float with printf from newlib-nano(-u_printf_float)
-![设置](3.png)
+<img width="" height="90%" class="embed-show" src="http://iamrobot.top:7878/?explorer/share/file&hash=76f8aPVQKG8L8GHTzlcOrg1Fng9ZQR5o3U0Es4qMexyKFY0lMLJO-jOHkQve3vb91MA&name=/3.png" alt="3.png"/>
+
