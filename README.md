@@ -3,15 +3,15 @@
 |"/"表示不用|||||||||
 |:-------------------------------|:---------:|:---------:|:--------------:|:------------:|:--------------:|:-----------:|:-----------:|:--------:|
 |**写入**                        |地址1byte  |功能码1byte|寄存器地址2bytes|寄存器数2bytes|conut字节数1byte| 数据1 2bytes|数据2 2bytes |校验2bytes|
-|主机发写多保持型寄存器4字节为例 |0x01       |0x10       |reg_H reg_L     |reg_H reg_L   | 0x04           |d1_H d1_L    |d2_H d2_L    |CRCH  CRCL|
-|从机应答                        |0x01       |0x10       |reg_H reg_L     |reg_H reg_L   |       /        |    /        |      /      |CRCH  CRCL|
-|主机发写单保持型寄存器          |0x01       |0x06       |reg_H reg_L     |       /      |       /        |d_H     d_L  |      /      |CRCH  CRCL|
-|从机应答                        |0x01       |0x06       |reg_H reg_L     |       /      |       /        |d_H     d_L  |      /      |CRCH  CRCL|
+|主机发写多保持型寄存器4字节为例 |115       |0x10       |reg_H reg_L     |reg_H reg_L   | 0x04           |d1_H d1_L    |d2_H d2_L    |CRCH  CRCL|
+|从机应答                        |115       |0x10       |reg_H reg_L     |reg_H reg_L   |       /        |    /        |      /      |CRCH  CRCL|
+|主机发写单保持型寄存器          |115       |0x06       |reg_H reg_L     |       /      |       /        |d_H     d_L  |      /      |CRCH  CRCL|
+|从机应答                        |115       |0x06       |reg_H reg_L     |       /      |       /        |d_H     d_L  |      /      |CRCH  CRCL|
 |**读取**                        |地址1byte  |功能码1byte|寄存器地址2bytes|寄存器数2bytes|conut 1byte     |地址/数据    |地址/数据    |校验2bytes|
-|主机发读取保持型寄存器          |0x01       |0x03       |       /        |       /      |     /          |reg_H   reg_L|n_H     n_L  |CRCH  CRCL|
-|从机应答 4字节为例              |0x01       |0x03       |       /        |       /      |  0x04          |d1_H     d1_L|d2_H    d2_L |CRCH  CRCL|
-|主机发读取输入型寄存器          |0x01       |0x04       |       /        |       /      |     /          |reg_H   reg_L|n_H     n_L  |CRCH  CRCL|
-|从机应答 4字节为例              |0x01       |0x04       |       /        |       /      |  0x04          |d1_H     d1_L|d2_H    d2_L |CRCH  CRCL|
+|主机发读取保持型寄存器          |115       |0x03       |       /        |       /      |     /          |reg_H   reg_L|n_H     n_L  |CRCH  CRCL|
+|从机应答 4字节为例              |115       |0x03       |       /        |       /      |  0x04          |d1_H     d1_L|d2_H    d2_L |CRCH  CRCL|
+|主机发读取输入型寄存器          |115       |0x04       |       /        |       /      |     /          |reg_H   reg_L|n_H     n_L  |CRCH  CRCL|
+|从机应答 4字节为例              |115       |0x04       |       /        |       /      |  0x04          |d1_H     d1_L|d2_H    d2_L |CRCH  CRCL|
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 # stm32cubeide支持sprintf浮点数的打印
